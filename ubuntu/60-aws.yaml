@@ -1,0 +1,10 @@
+# NetPlan file for Ubuntu on AWS (non-nitro) hypervisor
+# This plan matches the vif nic driver and assign a dhcp address
+network:
+    version: 2
+    ethernets:
+        eth0:
+            dhcp4: true
+            match:
+                driver: vif
+            set-name: eth0

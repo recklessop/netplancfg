@@ -1,0 +1,17 @@
+# NetPlan file for Ubuntu on VMware hypervisor
+# This plan matches a MAC address and assigns a static IP
+network:
+    ethernets:
+        ens160:
+            match:
+                macaddress: 00:50:56:ab:53:6d
+            addresses:
+            - 172.16.1.18/24
+            dhcp4: false
+            gateway4: 172.16.1.1
+            nameservers:
+                addresses:
+                - 172.17.1.2
+                search:
+                - labrack.xyz
+    version: 2

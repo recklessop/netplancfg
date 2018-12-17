@@ -1,0 +1,16 @@
+# This netplan yaml is delivered in Azure cloud images to support
+# attaching and detaching nics after the instance first boot.
+network:
+    version: 2
+    ethernets:
+        ephemeral:
+            dhcp4: true
+            match:
+                driver: hv_netvsc
+                name: '!eth0'
+            optional: true
+        hotpluggedeth0:
+            dhcp4: true
+            match:
+                driver: hv_netvsc
+                name: 'eth0'

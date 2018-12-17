@@ -1,0 +1,10 @@
+# NetPlan file for Ubuntu on AWS (nitro) hypervisor
+# This plan matches the ena nic driver and assign a dhcp address
+network:
+    version: 2
+    ethernets:
+        ens5:
+            dhcp4: true
+            match:
+                driver: ena
+            set-name: ens5

@@ -1,0 +1,10 @@
+# NetPlan file for Ubuntu on Azure hypervisor
+# This plan matches the hv_netvsc nic driver and assign a dhcp address
+network:
+    version: 2
+    ethernets:
+        eth0:
+            dhcp4: true
+            match:
+                driver: hv_netvsc
+            set-name: eth0
