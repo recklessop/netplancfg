@@ -3,7 +3,7 @@
 network:
     version: 2
     ethernets:
-        eth0:
+        azure0:
             dhcp4: true
             match:
                 driver: hv_netvsc
