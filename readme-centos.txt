@@ -5,7 +5,9 @@ sudo yum install python3 python34-PyYAML
 sudo yum install netplan
 sudo yum install git
 
+add_drivers+=" hv_vmbus hv_netvsc hv_storvsc nvme ena xen_blkfront xen_netfront "
 
+----- create a netplan.repo in /etc/yum.repos.d/ with this info ----
 [ngompa-Netplan]
 name=Copr repo for Netplan owned by ngompa
 baseurl=https://copr-be.cloud.fedoraproject.org/results/ngompa/Netplan/epel-7-$basearch/
