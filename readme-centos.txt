@@ -3,6 +3,7 @@ sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum update
 sudo yum install python3 python34-PyYAML
 sudo yum install netplan
+sudo yum install git
 
 
 [ngompa-Netplan]
